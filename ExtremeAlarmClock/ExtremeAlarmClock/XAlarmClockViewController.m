@@ -17,8 +17,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.motionManager = [[CMMotionManager alloc] init];
+    
+    if (!self.motionManager.deviceMotionAvailable) {
+        NSLog(@"No device motion");
+    }
+    else
+    {
+        NSLog(@"device motion available");
+
+    }
+    
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

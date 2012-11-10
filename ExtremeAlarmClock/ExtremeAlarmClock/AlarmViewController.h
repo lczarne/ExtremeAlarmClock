@@ -1,5 +1,5 @@
 //
-//  XAlarmClockViewController.h
+//  AlarmViewController.h
 //  ExtremeAlarmClock
 //
 //  Created by Łukasz Czarnecki on 11/10/12.
@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface XAlarmClockViewController : UIViewController
+@interface AlarmViewController : UIViewController
 @property (nonatomic, strong) CMMotionManager *motionManager;
-
 
 @end
