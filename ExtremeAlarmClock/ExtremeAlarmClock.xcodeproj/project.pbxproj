@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08A50E31164ED57000FCA9C2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A50E30164ED57000FCA9C2 /* InfoViewController.m */; };
 		2552719A164E6A6200DBCD7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25527199164E6A6200DBCD7E /* UIKit.framework */; };
 		2552719C164E6A6200DBCD7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719B164E6A6200DBCD7E /* Foundation.framework */; };
 		2552719E164E6A6200DBCD7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719D164E6A6200DBCD7E /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08A50E2F164ED57000FCA9C2 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		08A50E30164ED57000FCA9C2 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		25527195164E6A6200DBCD7E /* ExtremeAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtremeAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25527199164E6A6200DBCD7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2552719B164E6A6200DBCD7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				255271A8164E6A6200DBCD7E /* XAlarmClockAppDelegate.h */,
 				255271A9164E6A6200DBCD7E /* XAlarmClockAppDelegate.m */,
 				255271B1164E6A6200DBCD7E /* MainStoryboard.storyboard */,
+				08A50E2F164ED57000FCA9C2 /* InfoViewController.h */,
+				08A50E30164ED57000FCA9C2 /* InfoViewController.m */,
 				25561B3A164E9ABD006D7C50 /* AlarmViewController.h */,
 				25561B3B164E9ABD006D7C50 /* AlarmViewController.m */,
 				255271B4164E6A6200DBCD7E /* XAlarmClockViewController.h */,
@@ -187,6 +192,7 @@
 				255271AA164E6A6200DBCD7E /* XAlarmClockAppDelegate.m in Sources */,
 				255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */,
 				25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */,
+				08A50E31164ED57000FCA9C2 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

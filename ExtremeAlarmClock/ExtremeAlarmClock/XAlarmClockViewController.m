@@ -19,7 +19,6 @@
     // set the alarm clock to the chosen number
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
