@@ -16,6 +16,7 @@
 
 - (IBAction)infoButtonPressed:(UIButton *)sender
 {
+    // set the alarm clock to the chosen number
 }
 
 
@@ -23,6 +24,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSDate *currentDateTime = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"HH"];
+    NSString *hour = [dateFormatter stringFromDate:currentDateTime];
+    [dateFormatter setDateFormat:@"mm"];
+    NSString *minute = [dateFormatter stringFromDate:currentDateTime];
+    self.hourCounterLabel.text = [NSString stringWithFormat:@"%@",hour];
+    self.minuteCounterLabel.text = [NSString stringWithFormat:@"%@",minute];
 }
 
 - (void)didReceiveMemoryWarning
