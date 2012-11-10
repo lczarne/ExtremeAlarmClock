@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:AlarmClockX.xcodeproj">
+      location = "self:ExtremeAlarmClock.xcodeproj">
    </FileRef>
 </Workspace>

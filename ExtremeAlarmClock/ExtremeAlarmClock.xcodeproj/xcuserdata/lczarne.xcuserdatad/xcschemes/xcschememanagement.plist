@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AlarmClockX.xcscheme</key>
+		<key>ExtremeAlarmClock.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>25C2AD82164E5EE100A6C426</key>
+		<key>25527194164E6A6200DBCD7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

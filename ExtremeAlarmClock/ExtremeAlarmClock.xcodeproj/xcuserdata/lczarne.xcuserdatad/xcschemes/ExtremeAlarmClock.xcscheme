@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25C2AD82164E5EE100A6C426"
-               BuildableName = "AlarmClockX.app"
-               BlueprintName = "AlarmClockX"
-               ReferencedContainer = "container:AlarmClockX.xcodeproj">
+               BlueprintIdentifier = "25527194164E6A6200DBCD7E"
+               BuildableName = "ExtremeAlarmClock.app"
+               BlueprintName = "ExtremeAlarmClock"
+               ReferencedContainer = "container:ExtremeAlarmClock.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25C2AD82164E5EE100A6C426"
-            BuildableName = "AlarmClockX.app"
-            BlueprintName = "AlarmClockX"
-            ReferencedContainer = "container:AlarmClockX.xcodeproj">
+            BlueprintIdentifier = "25527194164E6A6200DBCD7E"
+            BuildableName = "ExtremeAlarmClock.app"
+            BlueprintName = "ExtremeAlarmClock"
+            ReferencedContainer = "container:ExtremeAlarmClock.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25C2AD82164E5EE100A6C426"
-            BuildableName = "AlarmClockX.app"
-            BlueprintName = "AlarmClockX"
-            ReferencedContainer = "container:AlarmClockX.xcodeproj">
+            BlueprintIdentifier = "25527194164E6A6200DBCD7E"
+            BuildableName = "ExtremeAlarmClock.app"
+            BlueprintName = "ExtremeAlarmClock"
+            ReferencedContainer = "container:ExtremeAlarmClock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25C2AD82164E5EE100A6C426"
-            BuildableName = "AlarmClockX.app"
-            BlueprintName = "AlarmClockX"
-            ReferencedContainer = "container:AlarmClockX.xcodeproj">
+            BlueprintIdentifier = "25527194164E6A6200DBCD7E"
+            BuildableName = "ExtremeAlarmClock.app"
+            BlueprintName = "ExtremeAlarmClock"
+            ReferencedContainer = "container:ExtremeAlarmClock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

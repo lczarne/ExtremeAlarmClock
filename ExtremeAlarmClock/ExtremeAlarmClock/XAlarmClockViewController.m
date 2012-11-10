@@ -1,23 +1,22 @@
 //
-//  prfxViewController.m
-//  AlarmClockX
+//  XAlarmClockViewController.m
+//  ExtremeAlarmClock
 //
 //  Created by Łukasz Czarnecki on 11/10/12.
 //  Copyright (c) 2012 Łukasz Czarnecki. All rights reserved.
 //
 
-#import "prfxViewController.h"
+#import "XAlarmClockViewController.h"
 
-@interface prfxViewController ()
+@interface XAlarmClockViewController ()
 
 @end
 
-@implementation prfxViewController
+@implementation XAlarmClockViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"loggggg22222");
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

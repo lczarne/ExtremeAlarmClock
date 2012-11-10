@@ -1,6 +1,6 @@
 //
-//  prfxViewController.h
-//  AlarmClockX
+//  XAlarmClockViewController.h
+//  ExtremeAlarmClock
 //
 //  Created by Łukasz Czarnecki on 11/10/12.
 //  Copyright (c) 2012 Łukasz Czarnecki. All rights reserved.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface prfxViewController : UIViewController
+@interface XAlarmClockViewController : UIViewController
 
 @end
