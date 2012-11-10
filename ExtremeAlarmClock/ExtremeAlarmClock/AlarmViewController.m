@@ -13,6 +13,9 @@
 @end
 
 @implementation AlarmViewController
+- (IBAction)goBack:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

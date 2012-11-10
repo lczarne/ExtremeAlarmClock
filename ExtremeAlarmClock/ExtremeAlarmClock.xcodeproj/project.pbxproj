@@ -18,6 +18,7 @@
 		255271B0164E6A6200DBCD7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 255271AF164E6A6200DBCD7E /* Default-568h@2x.png */; };
 		255271B3164E6A6200DBCD7E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255271B1164E6A6200DBCD7E /* MainStoryboard.storyboard */; };
 		255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */; };
+		25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25561B3B164E9ABD006D7C50 /* AlarmViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		255271B2164E6A6200DBCD7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		255271B4164E6A6200DBCD7E /* XAlarmClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XAlarmClockViewController.h; sourceTree = "<group>"; };
 		255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XAlarmClockViewController.m; sourceTree = "<group>"; };
+		25561B3A164E9ABD006D7C50 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
+		25561B3B164E9ABD006D7C50 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				255271A8164E6A6200DBCD7E /* XAlarmClockAppDelegate.h */,
 				255271A9164E6A6200DBCD7E /* XAlarmClockAppDelegate.m */,
 				255271B1164E6A6200DBCD7E /* MainStoryboard.storyboard */,
+				25561B3A164E9ABD006D7C50 /* AlarmViewController.h */,
+				25561B3B164E9ABD006D7C50 /* AlarmViewController.m */,
 				255271B4164E6A6200DBCD7E /* XAlarmClockViewController.h */,
 				255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */,
 				255271A0164E6A6200DBCD7E /* Supporting Files */,
@@ -177,6 +182,7 @@
 				255271A6164E6A6200DBCD7E /* main.m in Sources */,
 				255271AA164E6A6200DBCD7E /* XAlarmClockAppDelegate.m in Sources */,
 				255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */,
+				25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 				255271BB164E6A6200DBCD7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
