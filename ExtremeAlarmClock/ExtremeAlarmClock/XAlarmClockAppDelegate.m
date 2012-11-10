@@ -1,14 +1,14 @@
 //
-//  prfxAppDelegate.m
-//  AlarmClockX
+//  XAlarmClockAppDelegate.m
+//  ExtremeAlarmClock
 //
 //  Created by Łukasz Czarnecki on 11/10/12.
 //  Copyright (c) 2012 Łukasz Czarnecki. All rights reserved.
 //
 
-#import "prfxAppDelegate.h"
+#import "XAlarmClockAppDelegate.h"
 
-@implementation prfxAppDelegate
+@implementation XAlarmClockAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
