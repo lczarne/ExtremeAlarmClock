@@ -10,6 +10,7 @@
 
 @interface XAlarmClockViewController : UIViewController
 
+
 @property (weak, nonatomic) IBOutlet UILabel *hourCounterLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *minuteCounterLabel;

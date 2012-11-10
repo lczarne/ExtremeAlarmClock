@@ -19,10 +19,6 @@
 }
 
 
-- (IBAction)alarmButtonPressed:(UIButton *)sender
-{
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
