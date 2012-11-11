@@ -229,6 +229,16 @@
                          }
          ];
         
+        self.resultColorView.backgroundColor = [UIColor greenColor];
+        [UIView animateWithDuration:0.1 animations:^{
+            self.resultColorView.alpha = 0.4;
+            
+        } completion:^(BOOL succes){
+            [UIView animateWithDuration:0.3 animations:^{
+                self.resultColorView.alpha = 0;
+            }];
+        }];
+        
     }
     else{
         self.arrowLabel.text = @"FAIL";
@@ -236,6 +246,17 @@
         [UIView animateWithDuration:0.7 animations:^{
             self.arrowImageView.alpha = 0;
         }];
+        
+        self.resultColorView.backgroundColor = [UIColor redColor];
+        [UIView animateWithDuration:0.1 animations:^{
+            self.resultColorView.alpha = 0.4;
+            
+        } completion:^(BOOL succes){
+            [UIView animateWithDuration:0.3 animations:^{
+                self.resultColorView.alpha = 0;
+            }];
+        }];
+        
     }
     
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTask) userInfo:nil repeats:NO];
@@ -291,7 +312,10 @@
 
 - (void)setTask
 {
+
     if (!self.taskIsON) {
+        
+        
         NSLog(@"max :%f min:%f",self.maxX,self.minX);
         self.maxX = 0;
         self.minX = 0;
@@ -370,6 +394,7 @@
     
     [self setupPlayers];
     
+    self.resultColorView.alpha = 0;
     self.taskIsON = NO;
     self.arrowImageView.alpha = 0;
     self.imageViewDefaultFrame = self.arrowImageView.frame;
@@ -395,6 +420,7 @@
     [self setMaxLabel:nil];
     [self setMinLabel:nil];
     [self setArrowImageView:nil];
+    [self setResultColorView:nil];
     [super viewDidUnload];
 }
 
