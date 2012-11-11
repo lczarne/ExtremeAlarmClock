@@ -26,7 +26,7 @@
 
 - (IBAction)closeButtonPressed:(id)sender
 {
-    
+    [self.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad

@@ -24,6 +24,10 @@
 		25561B53164F3CCD006D7C50 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B4F164F39E7006D7C50 /* AVFoundation.framework */; };
 		25561B59164F48E2006D7C50 /* ding3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25561B58164F48E2006D7C50 /* ding3.wav */; };
 		25976EA6165000730023E2BE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25976EA5165000730023E2BE /* InfoViewController.m */; };
+		25976EB5165001F80023E2BE /* SLNumberPickerTicks.png in Resources */ = {isa = PBXBuildFile; fileRef = 25976EB0165001F80023E2BE /* SLNumberPickerTicks.png */; };
+		25976EB6165001F80023E2BE /* SLNumberPickerTicks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25976EB1165001F80023E2BE /* SLNumberPickerTicks@2x.png */; };
+		25976EB7165001F80023E2BE /* SLNumberPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25976EB3165001F80023E2BE /* SLNumberPickerView.m */; };
+		25976EB8165001F80023E2BE /* SLNumberPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25976EB4165001F80023E2BE /* SLNumberPickerView.xib */; };
 		25EF7397164FE2EF009241EA /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF738F164FE2EF009241EA /* down.png */; };
 		25EF7398164FE2EF009241EA /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7390164FE2EF009241EA /* down@2x.png */; };
 		25EF7399164FE2EF009241EA /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7391164FE2EF009241EA /* left.png */; };
@@ -64,6 +68,11 @@
 		25561B58164F48E2006D7C50 /* ding3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding3.wav; sourceTree = "<group>"; };
 		25976EA4165000730023E2BE /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		25976EA5165000730023E2BE /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		25976EB0165001F80023E2BE /* SLNumberPickerTicks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SLNumberPickerTicks.png; sourceTree = "<group>"; };
+		25976EB1165001F80023E2BE /* SLNumberPickerTicks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SLNumberPickerTicks@2x.png"; sourceTree = "<group>"; };
+		25976EB2165001F80023E2BE /* SLNumberPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLNumberPickerView.h; sourceTree = "<group>"; };
+		25976EB3165001F80023E2BE /* SLNumberPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLNumberPickerView.m; sourceTree = "<group>"; };
+		25976EB4165001F80023E2BE /* SLNumberPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SLNumberPickerView.xib; sourceTree = "<group>"; };
 		25EF738F164FE2EF009241EA /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		25EF7390164FE2EF009241EA /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
 		25EF7391164FE2EF009241EA /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
@@ -125,6 +134,7 @@
 		2552719F164E6A6200DBCD7E /* ExtremeAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				25976EAF165001F80023E2BE /* SLNumberPicker */,
 				25561B40164EA95D006D7C50 /* Helpers */,
 				255271A8164E6A6200DBCD7E /* XAlarmClockAppDelegate.h */,
 				255271A9164E6A6200DBCD7E /* XAlarmClockAppDelegate.m */,
@@ -165,6 +175,18 @@
 				25561B42164EA9AC006D7C50 /* Constants.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		25976EAF165001F80023E2BE /* SLNumberPicker */ = {
+			isa = PBXGroup;
+			children = (
+				25976EB0165001F80023E2BE /* SLNumberPickerTicks.png */,
+				25976EB1165001F80023E2BE /* SLNumberPickerTicks@2x.png */,
+				25976EB2165001F80023E2BE /* SLNumberPickerView.h */,
+				25976EB3165001F80023E2BE /* SLNumberPickerView.m */,
+				25976EB4165001F80023E2BE /* SLNumberPickerView.xib */,
+			);
+			path = SLNumberPicker;
 			sourceTree = "<group>";
 		};
 		25EF738D164FE2D8009241EA /* arrows */ = {
@@ -249,6 +271,9 @@
 				25EF739D164FE2EF009241EA /* up.png in Resources */,
 				25EF739E164FE2EF009241EA /* up@2x.png in Resources */,
 				25EF73A2164FF444009241EA /* error2.wav in Resources */,
+				25976EB5165001F80023E2BE /* SLNumberPickerTicks.png in Resources */,
+				25976EB6165001F80023E2BE /* SLNumberPickerTicks@2x.png in Resources */,
+				25976EB8165001F80023E2BE /* SLNumberPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +290,7 @@
 				25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */,
 				25561B43164EA9AC006D7C50 /* Constants.m in Sources */,
 				25976EA6165000730023E2BE /* InfoViewController.m in Sources */,
+				25976EB7165001F80023E2BE /* SLNumberPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
