@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08A50E31164ED57000FCA9C2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A50E30164ED57000FCA9C2 /* InfoViewController.m */; };
-		08A50E34164FAF4500FCA9C2 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A50E33164FAF4500FCA9C2 /* close.png */; };
 		2552719A164E6A6200DBCD7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25527199164E6A6200DBCD7E /* UIKit.framework */; };
 		2552719C164E6A6200DBCD7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719B164E6A6200DBCD7E /* Foundation.framework */; };
 		2552719E164E6A6200DBCD7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719D164E6A6200DBCD7E /* CoreGraphics.framework */; };
@@ -25,6 +23,7 @@
 		25561B43164EA9AC006D7C50 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25561B42164EA9AC006D7C50 /* Constants.m */; };
 		25561B53164F3CCD006D7C50 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B4F164F39E7006D7C50 /* AVFoundation.framework */; };
 		25561B59164F48E2006D7C50 /* ding3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25561B58164F48E2006D7C50 /* ding3.wav */; };
+		25976EA6165000730023E2BE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25976EA5165000730023E2BE /* InfoViewController.m */; };
 		25EF7397164FE2EF009241EA /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF738F164FE2EF009241EA /* down.png */; };
 		25EF7398164FE2EF009241EA /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7390164FE2EF009241EA /* down@2x.png */; };
 		25EF7399164FE2EF009241EA /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7391164FE2EF009241EA /* left.png */; };
@@ -37,8 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08A50E2F164ED57000FCA9C2 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		08A50E30164ED57000FCA9C2 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		08A50E33164FAF4500FCA9C2 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = assets/close.png; sourceTree = "<group>"; };
 		25527195164E6A6200DBCD7E /* ExtremeAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtremeAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25527199164E6A6200DBCD7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +62,8 @@
 		25561B4B164F3813006D7C50 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		25561B4F164F39E7006D7C50 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		25561B58164F48E2006D7C50 /* ding3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding3.wav; sourceTree = "<group>"; };
+		25976EA4165000730023E2BE /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		25976EA5165000730023E2BE /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		25EF738F164FE2EF009241EA /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		25EF7390164FE2EF009241EA /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
 		25EF7391164FE2EF009241EA /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
@@ -130,12 +129,12 @@
 				255271A8164E6A6200DBCD7E /* XAlarmClockAppDelegate.h */,
 				255271A9164E6A6200DBCD7E /* XAlarmClockAppDelegate.m */,
 				255271B1164E6A6200DBCD7E /* MainStoryboard.storyboard */,
-				08A50E2F164ED57000FCA9C2 /* InfoViewController.h */,
-				08A50E30164ED57000FCA9C2 /* InfoViewController.m */,
 				25561B3A164E9ABD006D7C50 /* AlarmViewController.h */,
 				25561B3B164E9ABD006D7C50 /* AlarmViewController.m */,
 				255271B4164E6A6200DBCD7E /* XAlarmClockViewController.h */,
 				255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */,
+				25976EA4165000730023E2BE /* InfoViewController.h */,
+				25976EA5165000730023E2BE /* InfoViewController.m */,
 				25EF738D164FE2D8009241EA /* arrows */,
 				255271A0164E6A6200DBCD7E /* Supporting Files */,
 			);
@@ -240,7 +239,6 @@
 				255271AE164E6A6200DBCD7E /* Default@2x.png in Resources */,
 				255271B0164E6A6200DBCD7E /* Default-568h@2x.png in Resources */,
 				255271B3164E6A6200DBCD7E /* MainStoryboard.storyboard in Resources */,
-<<<<<<< HEAD
 				25561B59164F48E2006D7C50 /* ding3.wav in Resources */,
 				25EF7397164FE2EF009241EA /* down.png in Resources */,
 				25EF7398164FE2EF009241EA /* down@2x.png in Resources */,
@@ -251,9 +249,6 @@
 				25EF739D164FE2EF009241EA /* up.png in Resources */,
 				25EF739E164FE2EF009241EA /* up@2x.png in Resources */,
 				25EF73A2164FF444009241EA /* error2.wav in Resources */,
-=======
-				08A50E34164FAF4500FCA9C2 /* close.png in Resources */,
->>>>>>> f9fda908a6a483212b9c47e095b1ef7a1bcfdd0a
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +263,8 @@
 				255271AA164E6A6200DBCD7E /* XAlarmClockAppDelegate.m in Sources */,
 				255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */,
 				25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */,
-<<<<<<< HEAD
 				25561B43164EA9AC006D7C50 /* Constants.m in Sources */,
-=======
-				08A50E31164ED57000FCA9C2 /* InfoViewController.m in Sources */,
->>>>>>> f9fda908a6a483212b9c47e095b1ef7a1bcfdd0a
+				25976EA6165000730023E2BE /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
