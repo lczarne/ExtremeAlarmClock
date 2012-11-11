@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 
-@interface AlarmViewController : UIViewController
+@interface AlarmViewController : UIViewController <AVAudioPlayerDelegate>
 @property (nonatomic, strong) CMMotionManager *motionManager;
 @property int currentTask;
 @property BOOL taskIsON;

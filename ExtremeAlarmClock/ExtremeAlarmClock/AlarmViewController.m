@@ -11,13 +11,28 @@
 #import "Constants.h"
 
 @interface AlarmViewController ()
-@property double max;
-@property double min;
+@property double maxX;
+@property double minX;
+@property double maxY;
+@property double minY;
 @property double distance;
 @property BOOL counting;
+@property int verticalMoveDirection;
+@property int horizontalMoveDirection;
+@property BOOL didSucced;
+
+
+
+
+@property (nonatomic,strong) AVAudioPlayer *player;
 @end
 
 @implementation AlarmViewController
+
+#define VERTICAL_DIR_UP 1;
+#define VERTICAL_DIR_DOWN 0;
+#define HORIZONTAL_DIR_RIGHT 1;
+#define HORIZONTAL_DIR_LEFT 0;
 
 
 - (void)startSampling
@@ -31,16 +46,37 @@
         
         [self.motionManager startDeviceMotionUpdatesToQueue:operationQ withHandler:^(CMDeviceMotion *motion, NSError *error){
             //NSLog(@"x: %f y: %f z:%f",motion.userAcceleration.x, motion.userAcceleration.y, motion.userAcceleration.z);
-            if (motion.userAcceleration.x>self.max) {
-                self.max = motion.userAcceleration.x;
-                self.maxLabel.text = [NSString stringWithFormat:@"max: %f",self.max];
+            if (motion.userAcceleration.x>self.maxX) {
+                self.maxX = motion.userAcceleration.x;
+                self.maxLabel.text = [NSString stringWithFormat:@"max: %f",self.maxX];
                 self.testLabel.text =@"MAX";
+                
+                self.horizontalMoveDirection = HORIZONTAL_DIR_RIGHT;
             }
             
-            if (motion.userAcceleration.x<self.min) {
-                self.min = motion.userAcceleration.x;
-                self.minLabel.text = [NSString stringWithFormat:@"min: %f",self.min];
+            if (motion.userAcceleration.x<self.minX) {
+                self.minX = motion.userAcceleration.x;
+                self.minLabel.text = [NSString stringWithFormat:@"min: %f",self.minX];
                 self.testLabel.text =@"MIN";
+                
+                self.horizontalMoveDirection = HORIZONTAL_DIR_LEFT;
+
+            }
+            
+            if (motion.userAcceleration.y>self.maxY) {
+                self.maxY = motion.userAcceleration.y;
+                //self.maxLabel.text = [NSString stringWithFormat:@"max: %f",self.maxX];
+                self.testLabel.text =@"MAX";
+                
+                self.verticalMoveDirection = VERTICAL_DIR_UP;
+            }
+            
+            if (motion.userAcceleration.y<self.minY) {
+                self.minY = motion.userAcceleration.y;
+                //self.minLabel.text = [NSString stringWithFormat:@"min: %f",self.minX];
+                self.testLabel.text =@"MIN";
+                    
+                self.verticalMoveDirection = VERTICAL_DIR_DOWN;
 
             }
             
@@ -51,40 +87,29 @@
             self.yLabel.text = [NSString stringWithFormat:@"y: %f",motion.userAcceleration.y];
             self.zLabel.text = [NSString stringWithFormat:@"z: %f",motion.userAcceleration.z];
             
+            double limit = 1.3;
             
             if (self.taskIsON) {
-                //Right
-                if (motion.userAcceleration.x > 0.8) {
-                    self.testLabel.text = @"prawo";
-                    if (self.currentTask = kTask_right) {
-                        
-                        [self startCheckForX];
-                    }
+                
+                if (motion.userAcceleration.x > limit) {
+                    
+                    [self startCheckForX];
+
                 }
-                //Left
-                if (motion.userAcceleration.x < (-0.8)) {
-                    self.testLabel.text = @"lewo";
-                    if (self.currentTask = kTask_left) {
-                        
-                        [self startCheckForX];
-                    }
+                if (motion.userAcceleration.x < limit*(-1.0)) {
+                    
+                    [self startCheckForX];
+
                 }
-                //Up
-                if (motion.userAcceleration.y > 0.8) {
-                     self.testLabel.text = @"gora";
-                    if (self.currentTask = kTask_up) {
-                       
-                        [self startCheckForY];
-                    }
+                if (motion.userAcceleration.y > limit) {
+                    
+                    [self startCheckForY];
                 }
-                //Down
-                if (motion.userAcceleration.y < (-0.8)) {
-                    self.testLabel.text = @"dol";
-                    if (self.currentTask = kTask_down) {
-                        
-                        [self startCheckForY];
-                    }
+                if (motion.userAcceleration.y < limit*(-0.5)) {
+                    
+                    [self startCheckForY];
                 }
+                
             }
             
             
@@ -99,6 +124,10 @@
 {
     self.taskIsON = NO;
     self.xmotion = 0;
+    
+    self.maxX = 0;
+    self.minX = 0;
+    
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(checkXsum) userInfo:nil repeats:NO];
 }
 
@@ -106,6 +135,10 @@
 {
     self.taskIsON = NO;
     self.ymotion = 0;
+    
+    self.maxY = 0;
+    self.minY = 0;
+    
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(checkYsum) userInfo:nil repeats:NO];
 }
 
@@ -115,11 +148,39 @@
     
     //self.testLabel.text = [NSString stringWithFormat:@"xmotion: %f",self.xmotion];
     NSLog(@"xmotion: %f",self.xmotion);
+    int rigthDirection = HORIZONTAL_DIR_RIGHT;
+    int leftDirection = HORIZONTAL_DIR_LEFT;
+    if (self.horizontalMoveDirection == rigthDirection) {
+        if (self.currentTask == kTask_right) {
+            self.didSucced = YES;
+        }
+        //self.testLabel.text = @"RIGHT";
+    }
+    else if (self.horizontalMoveDirection == leftDirection) {
+        if (self.currentTask == kTask_left) {
+            self.didSucced = YES;
+        }
+        //self.testLabel.text = @"LEFT";
+    }
     [self setTaskCompleted];
 }
 
 - (void)checkYsum
 {
+    int upDirection = VERTICAL_DIR_UP;
+    int downDirection = VERTICAL_DIR_DOWN;
+    if (self.verticalMoveDirection == upDirection) {
+        if (self.currentTask == kTask_up) {
+            self.didSucced = YES;
+        }
+        //self.testLabel.text = @"UP";
+    }
+    else if (self.verticalMoveDirection == downDirection) {
+        if (self.currentTask == kTask_down) {
+            self.didSucced = YES;
+        }
+        //self.testLabel.text = @"DOWN";
+    }
     //self.testLabel.text = [NSString stringWithFormat:@"ymotion %f",self.ymotion];
     NSLog(@"ymotion: %f",self.ymotion);
     [self setTaskCompleted];
@@ -128,10 +189,32 @@
 - (void)setTaskCompleted
 {
     self.taskIsON = NO;
-    self.arrowLabel.text = @"OK";
+    if (self.didSucced) {
+        self.arrowLabel.text = @"OK";
+    }
+    else{
+        self.arrowLabel.text = @"FAIL";
+    }
+    
     [NSTimer scheduledTimerWithTimeInterval:1.9 target:self selector:@selector(setTask) userInfo:nil repeats:NO];
+    
+   
+    [self playSound];
+
 }
 
+- (void)playSound
+{
+//    dispatch_queue_t myCustomQueue;
+//    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
+//    
+//    dispatch_async(myCustomQueue, ^{
+        [self.player stop];
+        self.player.currentTime = 0;
+        [self.player play];
+//        NSLog(@"Do some work here.\n");
+//    });
+}
 
 - (void)scheduleNotificationWithItem
 {    
@@ -154,9 +237,13 @@
 - (void)setTask
 {
    // self.testLabel.text = @"...";
-    NSLog(@"max :%f min:%f",self.max,self.min);
-    self.min = 0;
-    self.max = 0;
+    NSLog(@"max :%f min:%f",self.maxX,self.minX);
+    self.maxX = 0;
+    self.minX = 0;
+    
+    self.maxY = 0;
+    self.minY = 0;
+    self.didSucced = NO;
     
     self.currentTask = arc4random() % 4;
     switch (self.currentTask) {
@@ -178,7 +265,7 @@
 }
 
 - (IBAction)goBack:(id)sender {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
+    [self.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -193,6 +280,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                               pathForResource:@"ding3"
+                                               ofType:@"wav"]];
+    
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+    [self.player prepareToPlay];
+    [self.player setVolume: 1.0];
+    [self.player setDelegate:self];
     
     self.motionManager = [[CMMotionManager alloc] init];
     if (self.motionManager.deviceMotionAvailable) {
@@ -215,5 +311,13 @@
     [self setMaxLabel:nil];
     [self setMinLabel:nil];
     [super viewDidUnload];
+}
+
+- (void) audioPlayerDidFinishPlaying: (AVAudioPlayer *) player
+                        successfully: (BOOL) completed {
+    
+    if (completed == YES) {
+        
+    }
 }
 @end
