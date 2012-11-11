@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08A50E31164ED57000FCA9C2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A50E30164ED57000FCA9C2 /* InfoViewController.m */; };
+		08A50E34164FAF4500FCA9C2 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A50E33164FAF4500FCA9C2 /* close.png */; };
 		2552719A164E6A6200DBCD7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25527199164E6A6200DBCD7E /* UIKit.framework */; };
 		2552719C164E6A6200DBCD7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719B164E6A6200DBCD7E /* Foundation.framework */; };
 		2552719E164E6A6200DBCD7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2552719D164E6A6200DBCD7E /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		08A50E2F164ED57000FCA9C2 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		08A50E30164ED57000FCA9C2 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		08A50E33164FAF4500FCA9C2 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = assets/close.png; sourceTree = "<group>"; };
 		25527195164E6A6200DBCD7E /* ExtremeAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtremeAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25527199164E6A6200DBCD7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2552719B164E6A6200DBCD7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 			children = (
 				255271A1164E6A6200DBCD7E /* ExtremeAlarmClock-Info.plist */,
 				255271A2164E6A6200DBCD7E /* InfoPlist.strings */,
+				08A50E33164FAF4500FCA9C2 /* close.png */,
 				255271A5164E6A6200DBCD7E /* main.m */,
 				255271A7164E6A6200DBCD7E /* ExtremeAlarmClock-Prefix.pch */,
 				255271AB164E6A6200DBCD7E /* Default.png */,
@@ -178,6 +181,7 @@
 				255271AE164E6A6200DBCD7E /* Default@2x.png in Resources */,
 				255271B0164E6A6200DBCD7E /* Default-568h@2x.png in Resources */,
 				255271B3164E6A6200DBCD7E /* MainStoryboard.storyboard in Resources */,
+				08A50E34164FAF4500FCA9C2 /* close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

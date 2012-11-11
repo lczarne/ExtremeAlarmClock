@@ -33,6 +33,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    UIImage *closeButtonImage = [UIImage imageNamed:@"../assets/close.png"];
+    [self.closeButton setBackgroundImage:closeButtonImage forState:UIControlStateNormal];
+    [self.view addSubview:self.closeButton];
 }
 
 - (void)didReceiveMemoryWarning
