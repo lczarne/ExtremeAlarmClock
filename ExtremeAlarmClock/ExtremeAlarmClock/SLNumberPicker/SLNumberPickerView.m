@@ -91,7 +91,13 @@
         label.font = [SLNumberPickerView numberFont];
         label.textAlignment = UITextAlignmentCenter;
         
-        label.text = [NSString stringWithFormat:@"%i", i];
+        if (i<10) {
+            label.text = [NSString stringWithFormat:@"0%i", i];
+        }
+        else {
+           label.text = [NSString stringWithFormat:@"%i", i]; 
+        }
+        
         
         CGRect frame = label.frame;
         frame.origin.y = frame.size.height * i;
@@ -116,7 +122,7 @@
     backgroundView.frame = frame;
     [scrollView insertSubview:backgroundView atIndex:0];
     
-    backgroundView.backgroundColor = [UIColor colorWithPatternImage:[SLNumberPickerView backgroundImage]];
+    //backgroundView.backgroundColor = [UIColor colorWithPatternImage:[SLNumberPickerView backgroundImage]];
 }
 
 // When scroll views finish moving, we can check their value.

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLNumberPickerView.h"
 
-@interface XAlarmClockViewController : UIViewController
+@interface XAlarmClockViewController : UIViewController <SLNumberPickerViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UILabel *hourCounterLabel;
