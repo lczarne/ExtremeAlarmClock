@@ -20,6 +20,9 @@
 		255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */; };
 		25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25561B3B164E9ABD006D7C50 /* AlarmViewController.m */; };
 		25561B3F164EA1C3006D7C50 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B3E164EA1C3006D7C50 /* CoreMotion.framework */; };
+		25561B43164EA9AC006D7C50 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25561B42164EA9AC006D7C50 /* Constants.m */; };
+		25561B49164F380B006D7C50 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B48164F380B006D7C50 /* MediaPlayer.framework */; };
+		25561B4C164F3813006D7C50 /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B4B164F3813006D7C50 /* MediaToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,10 @@
 		25561B3A164E9ABD006D7C50 /* AlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmViewController.h; sourceTree = "<group>"; };
 		25561B3B164E9ABD006D7C50 /* AlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmViewController.m; sourceTree = "<group>"; };
 		25561B3E164EA1C3006D7C50 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		25561B41164EA9AC006D7C50 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		25561B42164EA9AC006D7C50 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		25561B48164F380B006D7C50 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		25561B4B164F3813006D7C50 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25561B4C164F3813006D7C50 /* MediaToolbox.framework in Frameworks */,
+				25561B49164F380B006D7C50 /* MediaPlayer.framework in Frameworks */,
 				25561B3F164EA1C3006D7C50 /* CoreMotion.framework in Frameworks */,
 				2552719A164E6A6200DBCD7E /* UIKit.framework in Frameworks */,
 				2552719C164E6A6200DBCD7E /* Foundation.framework in Frameworks */,
@@ -62,6 +71,8 @@
 		2552718A164E6A6200DBCD7E = {
 			isa = PBXGroup;
 			children = (
+				25561B4B164F3813006D7C50 /* MediaToolbox.framework */,
+				25561B48164F380B006D7C50 /* MediaPlayer.framework */,
 				25561B3E164EA1C3006D7C50 /* CoreMotion.framework */,
 				2552719F164E6A6200DBCD7E /* ExtremeAlarmClock */,
 				25527198164E6A6200DBCD7E /* Frameworks */,
@@ -90,6 +101,7 @@
 		2552719F164E6A6200DBCD7E /* ExtremeAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				25561B40164EA95D006D7C50 /* Helpers */,
 				255271A8164E6A6200DBCD7E /* XAlarmClockAppDelegate.h */,
 				255271A9164E6A6200DBCD7E /* XAlarmClockAppDelegate.m */,
 				255271B1164E6A6200DBCD7E /* MainStoryboard.storyboard */,
@@ -114,6 +126,15 @@
 				255271AF164E6A6200DBCD7E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25561B40164EA95D006D7C50 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				25561B41164EA9AC006D7C50 /* Constants.h */,
+				25561B42164EA9AC006D7C50 /* Constants.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +208,7 @@
 				255271AA164E6A6200DBCD7E /* XAlarmClockAppDelegate.m in Sources */,
 				255271B6164E6A6200DBCD7E /* XAlarmClockViewController.m in Sources */,
 				25561B3C164E9ABD006D7C50 /* AlarmViewController.m in Sources */,
+				25561B43164EA9AC006D7C50 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -146,16 +146,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mxG-bh-hVA">
-                                <rect key="frame" x="107" y="221" width="106" height="53"/>
+                                <rect key="frame" x="70" y="223" width="181" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hRx-1X-6Cb">
-                                <rect key="frame" x="139" y="210" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hRx-1X-6Cb">
+                                <rect key="frame" x="106" y="211" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v1X-rK-OTZ">
+                                <rect key="frame" x="114" y="126" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V9Z-4V-jll">
+                                <rect key="frame" x="114" y="150" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -164,6 +178,8 @@
                     </view>
                     <connections>
                         <outlet property="arrowLabel" destination="hRx-1X-6Cb" id="UdL-sh-Mf8"/>
+                        <outlet property="maxLabel" destination="v1X-rK-OTZ" id="dpu-nz-9oC"/>
+                        <outlet property="minLabel" destination="V9Z-4V-jll" id="FnD-CM-8UU"/>
                         <outlet property="testLabel" destination="mxG-bh-hVA" id="VBm-XB-Got"/>
                         <outlet property="xLabel" destination="Mgy-O9-yZK" id="NwB-HZ-xGY"/>
                         <outlet property="yLabel" destination="qgq-Cc-KcD" id="2UG-ih-UHL"/>
@@ -172,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8u6-Bc-95K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="700"/>
+            <point key="canvasLocation" x="458" y="771"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hkA-ec-U5M">
@@ -193,8 +209,9 @@
         <class className="AlarmViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmViewController.h"/>
             <relationships>
-                <relationship kind="action" name="goBack:"/>
                 <relationship kind="outlet" name="arrowLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="maxLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="xLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="yLabel" candidateClass="UILabel"/>

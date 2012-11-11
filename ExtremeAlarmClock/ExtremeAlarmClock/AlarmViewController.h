@@ -12,11 +12,18 @@
 
 @interface AlarmViewController : UIViewController
 @property (nonatomic, strong) CMMotionManager *motionManager;
+@property int currentTask;
+@property BOOL taskIsON;
+@property double xmotion;
+@property double ymotion;
 
 @property (weak, nonatomic) IBOutlet UILabel *xLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yLabel;
 @property (weak, nonatomic) IBOutlet UILabel *zLabel;
 @property (weak, nonatomic) IBOutlet UILabel *testLabel;
 @property (weak, nonatomic) IBOutlet UILabel *arrowLabel;
+@property (weak, nonatomic) IBOutlet UILabel *maxLabel;
+@property (weak, nonatomic) IBOutlet UILabel *minLabel;
+
 
 @end
