@@ -23,6 +23,15 @@
 		25561B43164EA9AC006D7C50 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 25561B42164EA9AC006D7C50 /* Constants.m */; };
 		25561B53164F3CCD006D7C50 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25561B4F164F39E7006D7C50 /* AVFoundation.framework */; };
 		25561B59164F48E2006D7C50 /* ding3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25561B58164F48E2006D7C50 /* ding3.wav */; };
+		25EF7397164FE2EF009241EA /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF738F164FE2EF009241EA /* down.png */; };
+		25EF7398164FE2EF009241EA /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7390164FE2EF009241EA /* down@2x.png */; };
+		25EF7399164FE2EF009241EA /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7391164FE2EF009241EA /* left.png */; };
+		25EF739A164FE2EF009241EA /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7392164FE2EF009241EA /* left@2x.png */; };
+		25EF739B164FE2EF009241EA /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7393164FE2EF009241EA /* right.png */; };
+		25EF739C164FE2EF009241EA /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7394164FE2EF009241EA /* right@2x.png */; };
+		25EF739D164FE2EF009241EA /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7395164FE2EF009241EA /* up.png */; };
+		25EF739E164FE2EF009241EA /* up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25EF7396164FE2EF009241EA /* up@2x.png */; };
+		25EF73A2164FF444009241EA /* error2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25EF73A1164FF444009241EA /* error2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,15 @@
 		25561B4B164F3813006D7C50 /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		25561B4F164F39E7006D7C50 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		25561B58164F48E2006D7C50 /* ding3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding3.wav; sourceTree = "<group>"; };
+		25EF738F164FE2EF009241EA /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		25EF7390164FE2EF009241EA /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
+		25EF7391164FE2EF009241EA /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		25EF7392164FE2EF009241EA /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		25EF7393164FE2EF009241EA /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		25EF7394164FE2EF009241EA /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
+		25EF7395164FE2EF009241EA /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		25EF7396164FE2EF009241EA /* up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up@2x.png"; sourceTree = "<group>"; };
+		25EF73A1164FF444009241EA /* error2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = error2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,7 @@
 				25561B3B164E9ABD006D7C50 /* AlarmViewController.m */,
 				255271B4164E6A6200DBCD7E /* XAlarmClockViewController.h */,
 				255271B5164E6A6200DBCD7E /* XAlarmClockViewController.m */,
+				25EF738D164FE2D8009241EA /* arrows */,
 				255271A0164E6A6200DBCD7E /* Supporting Files */,
 			);
 			path = ExtremeAlarmClock;
@@ -120,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				25561B58164F48E2006D7C50 /* ding3.wav */,
+				25EF73A1164FF444009241EA /* error2.wav */,
 				255271A1164E6A6200DBCD7E /* ExtremeAlarmClock-Info.plist */,
 				255271A2164E6A6200DBCD7E /* InfoPlist.strings */,
 				255271A5164E6A6200DBCD7E /* main.m */,
@@ -138,6 +158,21 @@
 				25561B42164EA9AC006D7C50 /* Constants.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		25EF738D164FE2D8009241EA /* arrows */ = {
+			isa = PBXGroup;
+			children = (
+				25EF738F164FE2EF009241EA /* down.png */,
+				25EF7390164FE2EF009241EA /* down@2x.png */,
+				25EF7391164FE2EF009241EA /* left.png */,
+				25EF7392164FE2EF009241EA /* left@2x.png */,
+				25EF7393164FE2EF009241EA /* right.png */,
+				25EF7394164FE2EF009241EA /* right@2x.png */,
+				25EF7395164FE2EF009241EA /* up.png */,
+				25EF7396164FE2EF009241EA /* up@2x.png */,
+			);
+			name = arrows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +233,15 @@
 				255271B0164E6A6200DBCD7E /* Default-568h@2x.png in Resources */,
 				255271B3164E6A6200DBCD7E /* MainStoryboard.storyboard in Resources */,
 				25561B59164F48E2006D7C50 /* ding3.wav in Resources */,
+				25EF7397164FE2EF009241EA /* down.png in Resources */,
+				25EF7398164FE2EF009241EA /* down@2x.png in Resources */,
+				25EF7399164FE2EF009241EA /* left.png in Resources */,
+				25EF739A164FE2EF009241EA /* left@2x.png in Resources */,
+				25EF739B164FE2EF009241EA /* right.png in Resources */,
+				25EF739C164FE2EF009241EA /* right@2x.png in Resources */,
+				25EF739D164FE2EF009241EA /* up.png in Resources */,
+				25EF739E164FE2EF009241EA /* up@2x.png in Resources */,
+				25EF73A2164FF444009241EA /* error2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

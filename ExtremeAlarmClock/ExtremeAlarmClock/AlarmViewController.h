@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *maxLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 
 @end

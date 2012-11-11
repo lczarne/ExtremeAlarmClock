@@ -20,11 +20,11 @@
 @property int verticalMoveDirection;
 @property int horizontalMoveDirection;
 @property BOOL didSucced;
-
-
-
+@property CGRect imageViewDefaultFrame;
 
 @property (nonatomic,strong) AVAudioPlayer *player;
+@property (nonatomic,strong) AVAudioPlayer *playerError;
+
 @end
 
 @implementation AlarmViewController
@@ -191,15 +191,57 @@
     self.taskIsON = NO;
     if (self.didSucced) {
         self.arrowLabel.text = @"OK";
+        
+        CGRect newArroImageViewFrame1;
+        CGRect newArroImageViewFrame2;
+        CGFloat positionChange1 = 30;
+        CGFloat positionChange2 = 60;
+        switch (self.currentTask) {
+            case 0:
+                newArroImageViewFrame1 = CGRectMake(self.imageViewDefaultFrame.origin.x+positionChange1, self.imageViewDefaultFrame.origin.y, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                newArroImageViewFrame2 = CGRectMake(self.imageViewDefaultFrame.origin.x-positionChange2, self.imageViewDefaultFrame.origin.y, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                
+                break;
+            case 1:
+                newArroImageViewFrame1 = CGRectMake(self.imageViewDefaultFrame.origin.x-positionChange1, self.imageViewDefaultFrame.origin.y, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                newArroImageViewFrame2 = CGRectMake(self.imageViewDefaultFrame.origin.x+positionChange2, self.imageViewDefaultFrame.origin.y, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                break;
+            case 2:
+                newArroImageViewFrame1 = CGRectMake(self.imageViewDefaultFrame.origin.x, self.imageViewDefaultFrame.origin.y-positionChange1, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                newArroImageViewFrame2 = CGRectMake(self.imageViewDefaultFrame.origin.x, self.imageViewDefaultFrame.origin.y+positionChange2, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                break;
+            case 3:
+                newArroImageViewFrame1 = CGRectMake(self.imageViewDefaultFrame.origin.x, self.imageViewDefaultFrame.origin.y+positionChange1, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                newArroImageViewFrame2 = CGRectMake(self.imageViewDefaultFrame.origin.x, self.imageViewDefaultFrame.origin.y-positionChange2, self.imageViewDefaultFrame.size.width, self.imageViewDefaultFrame.size.height);
+                break;
+        }
+        
+        [self playSound];
+        
+        [UIView animateWithDuration:0.05 animations:^{
+            self.arrowImageView.frame = newArroImageViewFrame1;
+        }
+                         completion:^(BOOL succes){
+                             [UIView animateWithDuration:0.2 animations:^{
+                                 self.arrowImageView.frame = newArroImageViewFrame2;
+                                 self.arrowImageView.alpha = 0;
+                             }];
+                         }
+         ];
+        
     }
     else{
         self.arrowLabel.text = @"FAIL";
+        [self playErrorSound];
+        [UIView animateWithDuration:0.7 animations:^{
+            self.arrowImageView.alpha = 0;
+        }];
     }
     
-    [NSTimer scheduledTimerWithTimeInterval:1.9 target:self selector:@selector(setTask) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(setTask) userInfo:nil repeats:NO];
     
    
-    [self playSound];
+    
 
 }
 
@@ -214,6 +256,19 @@
         [self.player play];
 //        NSLog(@"Do some work here.\n");
 //    });
+}
+
+- (void)playErrorSound
+{
+    //    dispatch_queue_t myCustomQueue;
+    //    myCustomQueue = dispatch_queue_create("com.example.MyCustomQueue", NULL);
+    //
+    //    dispatch_async(myCustomQueue, ^{
+    [self.playerError stop];
+    self.playerError.currentTime = 0;
+    [self.playerError play];
+    //        NSLog(@"Do some work here.\n");
+    //    });
 }
 
 - (void)scheduleNotificationWithItem
@@ -236,32 +291,42 @@
 
 - (void)setTask
 {
-   // self.testLabel.text = @"...";
-    NSLog(@"max :%f min:%f",self.maxX,self.minX);
-    self.maxX = 0;
-    self.minX = 0;
-    
-    self.maxY = 0;
-    self.minY = 0;
-    self.didSucced = NO;
-    
-    self.currentTask = arc4random() % 4;
-    switch (self.currentTask) {
-        case 0:
-            self.arrowLabel.text = @"prawo";
-            break;
-        case 1:
-            self.arrowLabel.text = @"lewo";
-            break;
-        case 2:
-            self.arrowLabel.text = @"gora";
-            break;
-        case 3:
-            self.arrowLabel.text = @"dol";
-            break;
+    if (!self.taskIsON) {
+        NSLog(@"max :%f min:%f",self.maxX,self.minX);
+        self.maxX = 0;
+        self.minX = 0;
+        
+        self.maxY = 0;
+        self.minY = 0;
+        self.didSucced = NO;
+        
+        self.currentTask = arc4random() % 4;
+        switch (self.currentTask) {
+            case 0:
+                self.arrowImageView.image = [UIImage imageNamed:@"right.png"];
+                self.arrowLabel.text = @"prawo";
+                break;
+            case 1:
+                self.arrowImageView.image = [UIImage imageNamed:@"left.png"];
+                self.arrowLabel.text = @"lewo";
+                break;
+            case 2:
+                self.arrowImageView.image = [UIImage imageNamed:@"up.png"];
+                self.arrowLabel.text = @"gora";
+                break;
+            case 3:
+                self.arrowImageView.image = [UIImage imageNamed:@"down.png"];
+                self.arrowLabel.text = @"dol";
+                break;
+        }
+        self.arrowImageView.frame = self.imageViewDefaultFrame;
+        [UIView animateWithDuration:0.1 animations:^{
+            self.arrowImageView.alpha = 1.0;
+        }];
+        self.taskIsON = YES;
+        NSLog(@"task:%d",self.currentTask);
     }
-    self.taskIsON = YES;
-    NSLog(@"task:%d",self.currentTask);
+    
 }
 
 - (IBAction)goBack:(id)sender {
@@ -277,19 +342,38 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)setupPlayers
 {
-    [super viewDidLoad];
-    
-    NSURL* musicFile = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL* musicFileDing = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                pathForResource:@"ding3"
                                                ofType:@"wav"]];
     
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFile error:nil];
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFileDing error:nil];
     [self.player prepareToPlay];
     [self.player setVolume: 1.0];
     [self.player setDelegate:self];
     
+    NSURL* musicFileError = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                               pathForResource:@"error2"
+                                               ofType:@"wav"]];
+    
+    self.playerError = [[AVAudioPlayer alloc] initWithContentsOfURL:musicFileError error:nil];
+    [self.playerError prepareToPlay];
+    [self.playerError setVolume: 1.0];
+    [self.playerError setDelegate:self];
+    
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self setupPlayers];
+    
+    self.taskIsON = NO;
+    self.arrowImageView.alpha = 0;
+    self.imageViewDefaultFrame = self.arrowImageView.frame;
+        
     self.motionManager = [[CMMotionManager alloc] init];
     if (self.motionManager.deviceMotionAvailable) {
         [self startSampling];
@@ -310,6 +394,7 @@
 - (void)viewDidUnload {
     [self setMaxLabel:nil];
     [self setMinLabel:nil];
+    [self setArrowImageView:nil];
     [super viewDidUnload];
 }
 
